@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar-side {
+  width: 200px;
+  height: 100vh;
+  position: fixed;
+  background-color: #343a40;
+  -webkit-transition: 0.2s all ease-in-out;
+  transition: 0.2s all ease-in-out;
+}
+
+.navbar-side h6 {
+  color: #fff;
+  margin: 9px 0 10px 20px;
+  font-size: 18px;
+  line-height: 1.6;
+  white-space: nowrap;
+}
+
+.navbar-side ul li {
+  list-style-type: none;
+}
+
+.navbar-side ul li a {
+  padding: 10px;
+  display: inline-block;
+  text-decoration: none;
+  color: #ccc;
+  font-size: 1.1em;
+  width: 100%;
+  padding-left: 20px;
+  -webkit-transition: 0.2s all ease-in-out;
+  transition: 0.2s all ease-in-out;
+  white-space: nowrap;
+}
+
+.navbar-side ul li a:hover,
+.navbar-side ul li a.link-active {
+  background-color: #212121;
+  border-left: 5px solid #ccc;
+}
+
+.navbar-side ul li a .icon {
+  padding-right: 10px;
+}
+
+.content {
+  margin-left: 200px;
+  -webkit-transition: 0.2s all ease-in-out;
+  transition: 0.2s all ease-in-out;
+}
+
+.content #navBtn {
+  font-size: 20px;
+}
+
+.main.animate .navbar-side {
+  width: 60px;
+  -webkit-transition: 0.2s all ease-in-out;
+  transition: 0.2s all ease-in-out;
+}
+
+.main.animate .navbar-side .link-text {
+  display: none;
+}
+
+.main.animate .navbar-side .myCaret {
+  display: none;
+}
+
+.main.animate .content {
+  margin-left: 60px;
+}
+
+.myBtn[aria-expanded="false"] .myCaret:before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f107";
+  float: right;
+  transition: all 0.5s;
+}
+
+.myBtn[aria-expanded="true"] .myCaret:before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f107";
+  float: right;
+  transition: all 0.5s;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+@media (max-width: 991px) {
+  .main .navbar-side {
+    width: 40px;
+    -webkit-transition: 0.2s all ease-in-out;
+    transition: 0.2s all ease-in-out;
+    font-size: 0.8em;
+  }
+  .main .navbar-side .link-text {
+    display: none;
+  }
+  .main .navbar-side .caret {
+    display: none;
+  }
+  .main .navbar-side h6 {
+    margin: 9px 0 10px 9px;
+    font-size: 1.2em;
+    line-height: 1.9;
+  }
+  .main .navbar-side ul li a {
+    padding-left: 10px;
+  }
+  .main .navbar-side ul li a:hover,
+  .main .navbar-side ul li a.link-active {
+    border-left: 2px solid #ccc;
+  }
+  .main .content {
+    margin-left: 40px;
+  }
+  .main.animate .navbar-side {
+    width: 150px;
+    -webkit-transition: 0.2s all ease-in-out;
+    transition: 0.2s all ease-in-out;
+  }
+  .main.animate .navbar-side .link-text {
+    display: inline-block;
+  }
+  .main.animate .navbar-side .caret {
+    display: block;
+  }
+  .main.animate .content {
+    margin-left: 150px;
+  }
+  .myCaret {
+    display: none;
+  }
+}
